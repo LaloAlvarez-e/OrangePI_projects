@@ -17,7 +17,7 @@ OBJS += \
 %.o: ../%.c subdir.mk
 	@echo 'Building file: $<'
 	@echo 'Invoking: Cygwin C Compiler'
-	gcc -I"E:\GIT\OrangePI_projects\MyFirstServer\xUtils" -I"E:\GIT\OrangePI_projects\MyFirstServer\xUtils\xLogging" -I"E:\GIT\OrangePI_projects\MyFirstServer\xUtils\xErrorHandling" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -o "$@" "$<"
+	gcc -I../xUtils -I../xUtils/xLogging -I../xUtils/xErrorHandling -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
