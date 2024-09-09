@@ -42,7 +42,7 @@ main-build: MyFirstServer.exe
 MyFirstServer.exe: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Cygwin C Linker'
-	gcc  -o "MyFirstServer.exe" $(OBJS) $(USER_OBJS) $(LIBS)
+	gcc  -o "MyFirstServer.exe" $(OBJS) $(USER_OBJS) $(LIBS) -lxml2
 	@echo 'Finished building target: $@'
 	@echo ' '
 
