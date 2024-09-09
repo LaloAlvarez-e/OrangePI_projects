@@ -1,4 +1,4 @@
 /Debug/*.exe
-/Debug/*.d
-/Debug/*.o
+**.d
+**.o
 

@@ -4,17 +4,17 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../main.c 
+../xUtils/xErrorHandling/xErrorHandling.c 
 
 C_DEPS += \
-./main.d 
+./xUtils/xErrorHandling/xErrorHandling.d 
 
 OBJS += \
-./main.o 
+./xUtils/xErrorHandling/xErrorHandling.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes
-%.o: ../%.c subdir.mk
+xUtils/xErrorHandling/%.o: ../xUtils/xErrorHandling/%.c xUtils/xErrorHandling/subdir.mk
 	@echo 'Building file: $<'
 	@echo 'Invoking: Cygwin C Compiler'
 	gcc -I"E:\GIT\OrangePI_projects\MyFirstServer\xUtils" -I"E:\GIT\OrangePI_projects\MyFirstServer\xUtils\xLogging" -I"E:\GIT\OrangePI_projects\MyFirstServer\xUtils\xErrorHandling" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -o "$@" "$<"
@@ -22,10 +22,10 @@ OBJS += \
 	@echo ' '
 
 
-clean: clean--2e-
+clean: clean-xUtils-2f-xErrorHandling
 
-clean--2e-:
-	-$(RM) ./main.d ./main.o
+clean-xUtils-2f-xErrorHandling:
+	-$(RM) ./xUtils/xErrorHandling/xErrorHandling.d ./xUtils/xErrorHandling/xErrorHandling.o
 
-.PHONY: clean--2e-
+.PHONY: clean-xUtils-2f-xErrorHandling
 

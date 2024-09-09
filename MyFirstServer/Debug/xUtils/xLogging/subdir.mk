@@ -4,17 +4,17 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../main.c 
+../xUtils/xLogging/xLogging.c 
 
 C_DEPS += \
-./main.d 
+./xUtils/xLogging/xLogging.d 
 
 OBJS += \
-./main.o 
+./xUtils/xLogging/xLogging.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes
-%.o: ../%.c subdir.mk
+xUtils/xLogging/%.o: ../xUtils/xLogging/%.c xUtils/xLogging/subdir.mk
 	@echo 'Building file: $<'
 	@echo 'Invoking: Cygwin C Compiler'
 	gcc -I"E:\GIT\OrangePI_projects\MyFirstServer\xUtils" -I"E:\GIT\OrangePI_projects\MyFirstServer\xUtils\xLogging" -I"E:\GIT\OrangePI_projects\MyFirstServer\xUtils\xErrorHandling" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -o "$@" "$<"
@@ -22,10 +22,10 @@ OBJS += \
 	@echo ' '
 
 
-clean: clean--2e-
+clean: clean-xUtils-2f-xLogging
 
-clean--2e-:
-	-$(RM) ./main.d ./main.o
+clean-xUtils-2f-xLogging:
+	-$(RM) ./xUtils/xLogging/xLogging.d ./xUtils/xLogging/xLogging.o
 
-.PHONY: clean--2e-
+.PHONY: clean-xUtils-2f-xLogging
 

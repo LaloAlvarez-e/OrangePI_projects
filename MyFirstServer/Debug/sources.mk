@@ -15,4 +15,6 @@ OBJS :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 . \
+xUtils/xErrorHandling \
+xUtils/xLogging \
 
